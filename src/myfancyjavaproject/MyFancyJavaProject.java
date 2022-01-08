@@ -1,19 +1,18 @@
 package myfancyjavaproject;
 
-
-public class MyFancyJavaProject {
-
-    class TestClass{
-        int id;
-        String name;
-        TestClass(int id,String name){
-            this.id=id;
-            this.name=name;
-        }
+class TestClass {
+    private static TestClass tc;
+}
+private TestClass (int id, String name)
+{
+    this.id = id;
+    this.name = name;
+}
+public static getTC (int id, String name)
+{
+    if (tc == null)
+    {
+        tc = new TestClass(id, name);
+        return tc;
     }
-    
-    public static void main(){
-        TestClast tc = new TestClass();
-    }
-    
 }
